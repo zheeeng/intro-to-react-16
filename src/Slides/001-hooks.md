@@ -233,7 +233,7 @@ class EventEmitter () {
 }
 
 const em = new EventEmitter()
-const unSubscription = em.on('hello', () => { console.log('hello) })
+const unSubscription = em.on('hello', () => { console.log('hello') })
 unSubscription()
 ```
 
