@@ -1,0 +1,29 @@
+.article {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.article pre {
+  text-align: left;
+}
+.article h1 {
+  font-size: 2em;
+}
+.article h2 {
+  font-size: 1.75em;
+}
+.article h3 {
+  font-size: 1.5em;
+}
+.article ul, .article ol {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.article p, .article li {
+  padding-bottom: .5em;
+}
+
+.article a {
+  color: red;
+}
