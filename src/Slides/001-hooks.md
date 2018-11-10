@@ -64,7 +64,7 @@ export default class Component extends React.Component {
 # `this`
 
 ## `this` confuse people
-## Class is weight
+## Class is too heavy
 ## Don't forget bind the context!
 
 
