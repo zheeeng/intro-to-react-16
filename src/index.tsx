@@ -11,7 +11,7 @@ const files = fileContext.keys().reduce(
   [] as string [],
 )
 
-const App: React.SFC = () => {
+const App: React.SFC = React.memo(() => {
   const [slides, setSlides] = React.useState<string[]>([])
   React.useEffect(
     () => {
@@ -23,7 +23,7 @@ const App: React.SFC = () => {
   )
 
   return <Keynote slides={slides} />
-}
+})
 
 ReactDOM.render(<App />, document.getElementById('root'))
 

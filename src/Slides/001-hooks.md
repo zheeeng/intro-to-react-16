@@ -70,7 +70,8 @@ export default class Component extends React.Component {
 
 ```jsx
 export default class Component extends React.Component {
-    constructor () {
+    constructor (props) {
+        super(props)
         this.setTimer.bind(this)
     }
 
@@ -264,12 +265,13 @@ function Timer() {
 
 ```jsx
 function useFriend (friend, handleStatusChange) {
-    useEffect(() => {
-    ChatAPI.subscribeToFriendStatus(friend.id, handleStatusChange)
-    return () => {
-        ChatAPI.unsubscribeFromFriendStatus(friend.id, handleStatusChange)
-    }
-    }, [friend.id])
+    useEffect(
+        () => {
+            ChatAPI.subscribeToFriendStatus(friend.id, handleStatusChange)
+            return () => ChatAPI.unsubscribeFromFriendStatus(friend.id, handleStatusChange)
+        },
+        [friend.id]
+    )
 }
 
 function Panel (props) {
@@ -495,6 +497,7 @@ function Counter() {
 }
 ```
 
+
 # useImperativeMethods
 
 ```jsx
@@ -589,8 +592,8 @@ export default function observer(obj, vm) {
 
 ## reference
 
-[](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e)
-[](https://github.com/yyx990803/vue-hooks/blob/master/index.js)
+[react-hooks-not-magic-just-arrays](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e)
+[vue-hooks](https://github.com/yyx990803/vue-hooks/blob/master/index.js)
 
 
 # More Hooks
@@ -600,7 +603,7 @@ export default function observer(obj, vm) {
 
 # Limitation
 
-* getDerivedStateFromProps
+* getSnapshotBeforeUpdate
 * ComponentDidCatch
 
 
