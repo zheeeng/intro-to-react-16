@@ -605,6 +605,7 @@ export default function observer(obj, vm) {
 # Limitation
 
 * getSnapshotBeforeUpdate
+* getDerivedStateFromError
 * ComponentDidCatch
 
 
