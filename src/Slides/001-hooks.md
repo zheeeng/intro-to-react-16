@@ -590,7 +590,7 @@ export default function observer(obj, vm) {
 ```
 
 
-## reference
+## References
 
 [react-hooks-not-magic-just-arrays](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e)
 
