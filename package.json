@@ -14,7 +14,7 @@
     "react-dom": "^16.7.0-alpha.0",
     "react-markdown": "^4.0.3",
     "react-scripts": "2.1.1",
-    "rxjs-compat": "^6.3.3",
+    "rxjs-compat": "^6.6.7",
     "typescript": "3.1.6"
   },
   "scripts": {
